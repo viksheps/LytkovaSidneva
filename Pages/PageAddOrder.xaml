@@ -1,0 +1,75 @@
+﻿<Page x:Class="LytkovaSidneva.Pages.PageAddOrder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LytkovaSidneva.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAddOrder">
+
+    <Grid Background=" #F5F5F5">
+        <Button Content="Назад"
+                Background="#778899"
+                Width="70"
+                Height="30"
+                FontSize="15"
+                Click="ClBack"
+                Name="btnBack"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right" Margin="20" Grid.Column="1"/>
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" Grid.Column="1" >
+            <StackPanel
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <TextBlock Width="210"  FontSize="15" Text="Название заказа"/>
+                <TextBox Name="txbS"  FontSize="15" Width="150"/>
+            </StackPanel>
+            <StackPanel
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <TextBlock Width="210"  FontSize="15" Text="Цена"/>
+                <TextBox Name="txbNm"  FontSize="15" Width="150"/>
+            </StackPanel>
+            <StackPanel
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <TextBlock Width="210"  FontSize="15" Text="Количество"/>
+                <TextBox Name="txH"  FontSize="15" Width="150"/>
+            </StackPanel>
+            <StackPanel
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <TextBlock Width="210"  FontSize="15" Text="Дата заказа"/>
+                <TextBox Name="txbN"  FontSize="15" Width="150"/>
+            </StackPanel>
+            <StackPanel
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <TextBlock Width="210"  FontSize="15" Text="Дата выдачи заказа"/>
+                <TextBox Name="tx"  FontSize="15" Width="150"/>
+            </StackPanel>
+            <StackPanel
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <TextBlock Width="210"  FontSize="15" Text="Номер заказчика"/>
+                <TextBox Name="txC"  FontSize="15" Width="150"/>
+            </StackPanel>
+            <StackPanel
+                Margin="0,5,5,0">
+                <Button
+                    Background="#778899"
+                    Name="btnCreate"
+                    Margin="5"
+                    Content="Добавить"
+                    FontSize="15"
+                    Width="90"
+                    Click="ClAdd"
+                    >
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

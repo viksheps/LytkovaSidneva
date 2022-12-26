@@ -1,0 +1,77 @@
+﻿<Page x:Class="LytkovaSidneva.Pages.PageRedOrder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LytkovaSidneva.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageRedOrder">
+
+    <Grid  Background=" #F5F5F5">
+        <StackPanel Orientation="Vertical"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top">
+            <Button Content="Назад"
+                Width="70"
+                Click="ClBa"
+                Background="#778899"
+                Height="25"
+                x:Name="btnBack"
+                FontSize="15"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right" Margin="5"/>
+            <Button Content="Сохранить"
+                Width="70"
+                Background="#778899"
+                FontSize="15"
+                Click="ClSaveAdre"    
+                Height="25"
+                x:Name="btnD"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right" Margin="5"/>
+        </StackPanel>
+        <StackPanel
+                Name="DataPrint">
+            <TextBlock 
+                    Name="TxtName"
+                    Text="Редактирование заказа"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    FontSize="15pt"
+                    FontWeight="DemiBold"
+                    VerticalAlignment="Top"/>
+            <DataGrid Margin="0,20,0,0"
+                AutoGenerateColumns="False"
+                      Height="300"
+                Name="ListJournal">
+                <DataGrid.Columns>
+                    <DataGridTextColumn 
+                    Width="*"
+                    Header="Название позиции" 
+                    Binding="{Binding NameOrder}"/>
+                    <DataGridTextColumn 
+                      Width="*"
+                      Header="Цена" 
+                      Binding="{Binding Price}"/>
+                    <DataGridTextColumn 
+                      Width="*"
+                      Header="Количество" 
+                      Binding="{Binding Count}"/>
+                    <DataGridTextColumn 
+                      Width="*"
+                      Header="Дата заказа" 
+                      Binding="{Binding OrderDate}"/>
+                    <DataGridTextColumn 
+                      Width="*"
+                      Header="Дата выдачи заказа" 
+                      Binding="{Binding DateOfIssue}"/>
+                    <DataGridTextColumn 
+                      Width="*"
+                      Header="Номер заказчика" 
+                      Binding="{Binding IdCustomer}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>
